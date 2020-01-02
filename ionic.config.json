@@ -1,5 +1,7 @@
 {
   "name": "PruebaQr",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
