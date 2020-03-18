@@ -5,7 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 
+// the scanner!
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { HomePage } from './home.page';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 @NgModule({
   imports: [
@@ -17,11 +20,13 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    ZXingScannerModule
   ],
   declarations: [HomePage],
   providers: [
-    QRScanner
+    QRScanner,
+    AndroidPermissions
   ]
 })
 export class HomePageModule {}
